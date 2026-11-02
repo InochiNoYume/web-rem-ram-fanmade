@@ -23,10 +23,12 @@ jobs:
           test -f assets/css/characters.css
           test -f assets/css/character-profile.css
           test -f assets/css/timeline.css
+          test -f assets/css/universe.css
           test -f assets/js/main.js
           test -f assets/js/characters.js
           test -f assets/js/character-profile.js
           test -f assets/js/timeline.js
+          test -f assets/js/universe.js
           test -f pages/rem.html
           test -f pages/ram.html
           test -f pages/characters.html
@@ -40,6 +42,7 @@ jobs:
           node --check assets/js/characters.js
           node --check assets/js/character-profile.js
           node --check assets/js/timeline.js
+          node --check assets/js/universe.js
       - name: Check local links and assets in every page
         run: |
           node - <<'NODE'
@@ -81,6 +84,14 @@ jobs:
           grep -q 'spoilerFilter' pages/timeline.html
           grep -q 'const arcs' assets/js/timeline.js
           grep -q 'timelineList' assets/js/timeline.js
+      - name: Verify universe encyclopedia
+        run: |
+          grep -q 'universeSearch' pages/universe.html
+          grep -q 'universeCategory' pages/universe.html
+          grep -q 'universeSpoilers' pages/universe.html
+          grep -q 'const entries' assets/js/universe.js
+          grep -q 'renderUniverse' assets/js/universe.js
+          grep -q 'Council of the Ten Cities' assets/js/universe.js
       - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html

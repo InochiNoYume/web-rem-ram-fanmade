@@ -1,2 +1,63 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universo — Archivo Rem & Ram</title><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/pages.css"></head><body><header class="site-header"><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><nav><a href="../index.html">Inicio</a><a href="rem.html">Rem</a><a href="ram.html">Ram</a><a href="characters.html">Personajes</a><a href="timeline.html">Historia</a></nav><a class="language" href="../index.html">ES / EN</a></header><main class="wrap detail-page"><p class="eyebrow">WORLD GUIDE / 05</p><h1 class="detail-title">El universo de Re:Zero</h1><p class="detail-lead">Conceptos y elementos del mundo que ayudan a comprender el contexto de sus personajes e historias.</p><div class="world-grid"><article><span>01 / WORLD</span><h2>Geografía y naciones</h2><p>Regiones, ciudades, fronteras y lugares importantes. Cada entrada incluirá su ubicación y apariciones conocidas.</p></article><article><span>02 / MAGIC</span><h2>Magia y afinidades</h2><p>Principios generales de la magia, afinidades elementales y límites conocidos del sistema.</p></article><article><span>03 / SPIRITS</span><h2>Espíritus y contratos</h2><p>Tipos de espíritus, pactos y relaciones entre usuarios y entidades espirituales.</p></article><article><span>04 / RACES</span><h2>Razas y linajes</h2><p>Humanos, demi-humanos, oni y otros pueblos, evitando generalizaciones fuera del canon.</p></article><article><span>05 / GROUPS</span><h2>Organizaciones y facciones</h2><p>Instituciones, grupos políticos y organizaciones que intervienen en la historia.</p></article><article><span>06 / HISTORY</span><h2>Historia y leyendas</h2><p>Personajes históricos, relatos transmitidos y sucesos que marcaron el mundo.</p></article></div><p class="source-note">Las descripciones se completarán con fuentes y referencias. Las hipótesis de fans aparecerán separadas de los datos confirmados.</p></main><footer><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><small>Archivo fanmade no oficial.</small></footer><script src="../assets/js/main.js"></script></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Guía del universo de Re:Zero: naciones, lugares, magia, espíritus, pueblos y organizaciones.">
+<meta name="theme-color" content="#10111b">
+<title>Universo de Re:Zero — Archivo Rem & Ram</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/universe.css">
+</head>
+<body>
+<header class="site-header">
+<a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a>
+<button id="menuButton" class="menu-button" aria-expanded="false" aria-label="Abrir menú">☰</button>
+<nav id="mainNav">
+<a href="../index.html" data-es="Inicio" data-en="Home">Inicio</a>
+<a href="rem.html">Rem</a><a href="ram.html">Ram</a>
+<a href="characters.html" data-es="Personajes" data-en="Characters">Personajes</a>
+<a href="timeline.html" data-es="Historia" data-en="Story">Historia</a>
+</nav>
+<button id="languageButton" class="language" type="button">EN</button>
+</header>
+<main class="wrap detail-page universe-page">
+<p class="eyebrow">WORLD ARCHIVE / 05</p>
+<h1 class="detail-title" data-es="El universo de Re:Zero" data-en="The world of Re:Zero">El universo de Re:Zero</h1>
+<p class="detail-lead" data-es="Una guía para explorar el escenario de la historia: sus países, lugares, pueblos, sistemas sobrenaturales y organizaciones. Los datos se separan por nivel de spoilers y se distinguen de las interpretaciones de fans." data-en="A guide to the story's setting: its countries, places, peoples, supernatural systems and organizations. Entries are separated by spoiler level and distinguished from fan interpretations.">Una guía para explorar el escenario de la historia: sus países, lugares, pueblos, sistemas sobrenaturales y organizaciones. Los datos se separan por nivel de spoilers y se distinguen de las interpretaciones de fans.</p>
+
+<section class="universe-notice">
+<strong data-es="Antes de explorar" data-en="Before exploring">Antes de explorar</strong>
+<p data-es="Esta página contiene información general y algunos detalles posteriores de la novela. Usa el filtro de spoilers para limitar lo que aparece. Las diferencias entre anime, novela ligera y web novel se señalarán cuando sean relevantes." data-en="This page contains general information and some later light-novel details. Use the spoiler filter to limit what appears. Differences between the anime, light novel and web novel will be noted when relevant.">Esta página contiene información general y algunos detalles posteriores de la novela. Usa el filtro de spoilers para limitar lo que aparece. Las diferencias entre anime, novela ligera y web novel se señalarán cuando sean relevantes.</p>
+</section>
+
+<section class="universe-controls" aria-label="Filtros de la enciclopedia">
+<div><label for="universeSearch" data-es="Buscar en el universo" data-en="Search the world">Buscar en el universo</label><input id="universeSearch" type="search" placeholder="País, lugar, magia..." data-placeholder-es="País, lugar, magia..." data-placeholder-en="Country, place, magic..."></div>
+<div><label for="universeCategory" data-es="Tema" data-en="Topic">Tema</label><select id="universeCategory"><option value="all" data-es="Todos los temas" data-en="All topics">Todos los temas</option><option value="nations" data-es="Naciones" data-en="Nations">Naciones</option><option value="places" data-es="Lugares" data-en="Places">Lugares</option><option value="magic" data-es="Magia y espíritus" data-en="Magic & spirits">Magia y espíritus</option><option value="peoples" data-es="Pueblos y razas" data-en="Peoples">Pueblos y razas</option><option value="groups" data-es="Facciones" data-en="Factions">Facciones</option><option value="history" data-es="Historia y leyendas" data-en="History & legends">Historia y leyendas</option></select></div>
+<div><label for="universeSpoilers" data-es="Nivel máximo de spoilers" data-en="Maximum spoiler level">Nivel máximo de spoilers</label><select id="universeSpoilers"><option value="0" data-es="Nivel 0 · General" data-en="Level 0 · General">Nivel 0 · General</option><option value="1" data-es="Nivel 1 · Contexto" data-en="Level 1 · Context">Nivel 1 · Contexto</option><option value="2" data-es="Nivel 2 · Revelaciones" data-en="Level 2 · Revelations">Nivel 2 · Revelaciones</option></select></div>
+</section>
+<p id="universeCount" class="universe-count" aria-live="polite"></p>
+<section id="universeGrid" class="universe-grid" aria-live="polite"></section>
+<p id="universeEmpty" class="universe-empty" hidden data-es="No encontramos entradas con esos filtros. Prueba otra búsqueda o amplía el nivel de spoilers." data-en="No entries match those filters. Try another search or increase the spoiler level.">No encontramos entradas con esos filtros. Prueba otra búsqueda o amplía el nivel de spoilers.</p>
+
+<section class="universe-editorial">
+<div><span class="timeline-kicker" data-es="CRITERIO DEL ARCHIVO" data-en="ARCHIVE POLICY">CRITERIO DEL ARCHIVO</span><h2 data-es="Canon, adaptaciones y teorías" data-en="Canon, adaptations & theories">Canon, adaptaciones y teorías</h2></div>
+<p data-es="Las fichas resumen información publicada y no sustituyen las novelas. El anime adapta una parte de la obra; algunos detalles aparecen primero o con mayor profundidad en las novelas. Las teorías de la comunidad no se presentan como hechos. Cuando una entrada dependa de material posterior, se indicará su nivel de spoilers." data-en="Entries summarize published information and do not replace the novels. The anime adapts part of the work; some details first appear or receive greater depth in the novels. Community theories are not presented as facts. Entries based on later material are marked with their spoiler level.">Las fichas resumen información publicada y no sustituyen las novelas. El anime adapta una parte de la obra; algunos detalles aparecen primero o con mayor profundidad en las novelas. Las teorías de la comunidad no se presentan como hechos. Cuando una entrada dependa de material posterior, se indicará su nivel de spoilers.</p>
+</section>
+
+<section class="universe-sources">
+<span class="timeline-kicker" data-es="FUENTES PARA PROFUNDIZAR" data-en="FURTHER READING">FUENTES PARA PROFUNDIZAR</span>
+<ul>
+<li><a href="https://www.re-zero.com/" target="_blank" rel="noopener noreferrer">Sitio oficial de las novelas de Re:Zero ↗</a></li>
+<li><a href="https://www.re-zero.com/news/2517/" target="_blank" rel="noopener noreferrer">Preguntas y respuestas con Tappei Nagatsuki — países, shinobi y mundo ↗</a></li>
+<li><a href="https://www.re-zero.com/news/2632/" target="_blank" rel="noopener noreferrer">Preguntas y respuestas con Tappei Nagatsuki — magia y otros conceptos ↗</a></li>
+<li><a href="https://re-zero-anime.jp/tv/character/" target="_blank" rel="noopener noreferrer">Sitio oficial del anime — personajes y perfiles ↗</a></li>
+<li><a href="https://re-zero-anime.jp/tv/story/" target="_blank" rel="noopener noreferrer">Sitio oficial del anime — historias y episodios ↗</a></li>
+</ul>
+<p data-es="Las fuentes oficiales pueden contener spoilers de publicación reciente. Consulta sus avisos antes de abrirlas. Este sitio es un proyecto fanmade, no oficial y sin afiliación con los titulares de Re:Zero." data-en="Official sources may contain recent publication spoilers. Check their notices before opening them. This is an unofficial fanmade project and is not affiliated with Re:Zero's rights holders.">Las fuentes oficiales pueden contener spoilers de publicación reciente. Consulta sus avisos antes de abrirlas. Este sitio es un proyecto fanmade, no oficial y sin afiliación con los titulares de Re:Zero.</p>
+</section>
+<a class="back-link" href="../index.html" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a>
+</main>
+<footer><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><small>Archivo fanmade no oficial · Re:Zero pertenece a sus respectivos titulares.</small></footer>
+<script src="../assets/js/main.js"></script><script src="../assets/js/universe.js"></script>
+</body></html>
