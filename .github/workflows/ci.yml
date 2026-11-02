@@ -76,3 +76,4 @@ jobs:
           grep -q 'data-es=' index.html
           grep -q 'data-en=' index.html
           grep -q 'setLanguage' assets/js/main.js
+# Validate the individual character profile release.
