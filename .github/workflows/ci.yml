@@ -24,6 +24,7 @@ jobs:
           test -f assets/css/character-profile.css
           test -f assets/css/timeline.css
           test -f assets/css/universe.css
+          test -f assets/css/archive.css
           test -f assets/js/main.js
           test -f assets/js/characters.js
           test -f assets/js/character-profile.js
@@ -35,6 +36,12 @@ jobs:
           test -f pages/character.html
           test -f pages/timeline.html
           test -f pages/universe.html
+          test -f pages/adaptations.html
+          test -f pages/library.html
+          test -f pages/gallery.html
+          test -f pages/community.html
+          test -f pages/quality.html
+          test -f 404.html
           grep -qx 'rem-ram.me' CNAME
       - name: Check JavaScript syntax
         run: |
@@ -92,6 +99,19 @@ jobs:
           grep -q 'const entries' assets/js/universe.js
           grep -q 'renderUniverse' assets/js/universe.js
           grep -q 'Council of the Ten Cities' assets/js/universe.js
+      - name: Verify remaining archive sections
+        run: |
+          grep -q 'Adaptations' pages/adaptations.html
+          grep -q 'Biblioteca' pages/library.html
+          grep -q 'Galería' pages/gallery.html
+          grep -q 'Comunidad' pages/community.html
+          grep -q 'Calidad y publicación' pages/quality.html
+          grep -q '404' 404.html
+          grep -q 'pages/adaptations.html' index.html
+          grep -q 'pages/library.html' index.html
+          grep -q 'pages/gallery.html' index.html
+          grep -q 'pages/community.html' index.html
+          grep -q 'pages/quality.html' index.html
       - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html
