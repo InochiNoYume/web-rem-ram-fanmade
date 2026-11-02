@@ -21,11 +21,14 @@ jobs:
           test -f assets/css/style.css
           test -f assets/css/pages.css
           test -f assets/css/characters.css
+          test -f assets/css/character-profile.css
           test -f assets/js/main.js
           test -f assets/js/characters.js
+          test -f assets/js/character-profile.js
           test -f pages/rem.html
           test -f pages/ram.html
           test -f pages/characters.html
+          test -f pages/character.html
           test -f pages/timeline.html
           test -f pages/universe.html
           grep -qx 'rem-ram.me' CNAME
@@ -33,6 +36,7 @@ jobs:
         run: |
           node --check assets/js/main.js
           node --check assets/js/characters.js
+          node --check assets/js/character-profile.js
       - name: Check local links and assets in every page
         run: |
           node - <<'NODE'
@@ -64,7 +68,9 @@ jobs:
           grep -q 'characterSearch' pages/characters.html
           grep -q 'characterCategory' pages/characters.html
           grep -q 'renderCharacters' assets/js/characters.js
+          grep -q 'character.html?id=' assets/js/characters.js
           grep -q 'data-en=' pages/characters.html
+          grep -q 'profileData' assets/js/character-profile.js
       - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html
