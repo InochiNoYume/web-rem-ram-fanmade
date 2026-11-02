@@ -22,9 +22,11 @@ jobs:
           test -f assets/css/pages.css
           test -f assets/css/characters.css
           test -f assets/css/character-profile.css
+          test -f assets/css/timeline.css
           test -f assets/js/main.js
           test -f assets/js/characters.js
           test -f assets/js/character-profile.js
+          test -f assets/js/timeline.js
           test -f pages/rem.html
           test -f pages/ram.html
           test -f pages/characters.html
@@ -37,6 +39,7 @@ jobs:
           node --check assets/js/main.js
           node --check assets/js/characters.js
           node --check assets/js/character-profile.js
+          node --check assets/js/timeline.js
       - name: Check local links and assets in every page
         run: |
           node - <<'NODE'
@@ -71,6 +74,13 @@ jobs:
           grep -q 'character.html?id=' assets/js/characters.js
           grep -q 'data-en=' pages/characters.html
           grep -q 'profileData' assets/js/character-profile.js
+      - name: Verify story timeline filters
+        run: |
+          grep -q 'timelineSearch' pages/timeline.html
+          grep -q 'continuityFilter' pages/timeline.html
+          grep -q 'spoilerFilter' pages/timeline.html
+          grep -q 'const arcs' assets/js/timeline.js
+          grep -q 'timelineList' assets/js/timeline.js
       - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html

@@ -1,2 +1,65 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Historia y cronología — Archivo Rem & Ram</title><link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/pages.css"></head><body><header class="site-header"><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><nav><a href="../index.html">Inicio</a><a href="rem.html">Rem</a><a href="ram.html">Ram</a><a href="characters.html">Personajes</a><a href="universe.html">Universo</a></nav><a class="language" href="../index.html">ES / EN</a></header><main class="wrap detail-page"><p class="eyebrow">STORY ARCHIVE / 04</p><h1 class="detail-title">Historia & cronología</h1><p class="detail-lead">Una guía ordenada del relato, con continuidad y advertencias de spoilers claramente separadas.</p><div class="timeline"><article><span>00</span><div><h2>Antes del comienzo</h2><p>Contexto del mundo, sus países, razas, sistemas de poder y acontecimientos históricos que sirven de trasfondo.</p><small>INTRODUCCIÓN · SIN SPOILERS</small></div></article><article><span>01</span><div><h2>Arcos narrativos</h2><p>El recorrido principal se organizará por arcos, indicando los hitos esenciales, personajes presentes y consecuencias.</p><small>RESÚMENES EN PREPARACIÓN</small></div></article><article><span>02</span><div><h2>Historias complementarias</h2><p>Relatos EX, historias cortas y material adicional se tratarán como publicaciones relacionadas, sin confundirlos con la narración principal.</p><small>ÍNDICE EN PREPARACIÓN</small></div></article><article><span>03</span><div><h2>Rutas alternativas</h2><p>Las historias IF se identificarán como escenarios alternativos y no como acontecimientos de la continuidad principal.</p><small>CONTENIDO CON SPOILERS</small></div></article></div><p class="source-note">La cronología detallada se publicará solo cuando cada entrada pueda verificarse y atribuirse a su versión: anime, novela ligera o web novel.</p></main><footer><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><small>Archivo fanmade no oficial.</small></footer><script src="../assets/js/main.js"></script></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cronología de Re:Zero organizada por arcos, continuidades y niveles de spoilers.">
+<meta name="theme-color" content="#10111b">
+<title>Historia y cronología — Archivo Rem & Ram</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/timeline.css">
+</head>
+<body>
+<header class="site-header">
+<a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a>
+<button id="menuButton" class="menu-button" aria-expanded="false" aria-label="Abrir menú">☰</button>
+<nav id="mainNav">
+<a href="../index.html" data-es="Inicio" data-en="Home">Inicio</a>
+<a href="rem.html">Rem</a><a href="ram.html">Ram</a>
+<a href="characters.html" data-es="Personajes" data-en="Characters">Personajes</a>
+<a href="universe.html" data-es="Universo" data-en="World">Universo</a>
+</nav>
+<button id="languageButton" class="language" type="button">EN</button>
+</header>
+<main class="wrap detail-page timeline-page">
+<p class="eyebrow">STORY ARCHIVE / 04</p>
+<h1 class="detail-title" data-es="Historia y cronología" data-en="Story & timeline">Historia y cronología</h1>
+<p class="detail-lead" data-es="Un recorrido por la historia principal de Re:Zero, separado por arcos y versiones para que cada lector pueda orientarse sin mezclar adaptaciones." data-en="A guide to Re:Zero's main story, separated by arcs and versions so readers can navigate without mixing adaptations.">Un recorrido por la historia principal de Re:Zero, separado por arcos y versiones para que cada lector pueda orientarse sin mezclar adaptaciones.</p>
+
+<section class="timeline-intro">
+<div><span class="timeline-kicker" data-es="CÓMO LEER ESTA CRONOLOGÍA" data-en="HOW TO USE THIS TIMELINE">CÓMO LEER ESTA CRONOLOGÍA</span>
+<h2 data-es="Orden narrativo, no calendario" data-en="Narrative order, not a calendar">Orden narrativo, no calendario</h2>
+<p data-es="Los arcos aparecen en el orden en que se desarrolla la historia principal. Re:Zero no ofrece una fecha exacta para cada acontecimiento, así que no inventamos años ni días. Los relatos anteriores y las rutas alternativas se muestran aparte." data-en="Arcs appear in the order the main story unfolds. Re:Zero does not provide an exact date for every event, so we do not invent years or days. Earlier side stories and alternate routes are listed separately.">Los arcos aparecen en el orden en que se desarrolla la historia principal. Re:Zero no ofrece una fecha exacta para cada acontecimiento, así que no inventamos años ni días. Los relatos anteriores y las rutas alternativas se muestran aparte.</p></div>
+<div class="timeline-key"><p><b data-es="Continuidad" data-en="Continuity">Continuidad</b><span data-es="Anime · Novela ligera · Web novel" data-en="Anime · Light novel · Web novel">Anime · Novela ligera · Web novel</span></p><p><b data-es="Spoilers" data-en="Spoilers">Spoilers</b><span data-es="Nivel 0 · Nivel 1 · Nivel 2" data-en="Level 0 · Level 1 · Level 2">Nivel 0 · Nivel 1 · Nivel 2</span></p></div>
+</section>
+
+<section class="timeline-controls" aria-label="Filtros de cronología">
+<div class="timeline-control"><label for="timelineSearch" data-es="Buscar un arco" data-en="Search an arc">Buscar un arco</label><input id="timelineSearch" type="search" placeholder="Ej. Santuario / Sanctuary" data-placeholder-es="Ej. Santuario / Sanctuary" data-placeholder-en="e.g. Sanctuary / Santuario"></div>
+<div class="timeline-control"><label for="continuityFilter" data-es="Versión" data-en="Version">Versión</label><select id="continuityFilter"><option value="all" data-es="Todas las versiones" data-en="All versions">Todas las versiones</option><option value="anime">Anime</option><option value="light-novel" data-es="Novela ligera" data-en="Light novel">Novela ligera</option><option value="web-novel" data-es="Web novel" data-en="Web novel">Web novel</option></select></div>
+<div class="timeline-control"><label for="spoilerFilter" data-es="Mostrar hasta" data-en="Show up to">Mostrar hasta</label><select id="spoilerFilter"><option value="0" data-es="Nivel 0 · Sin spoilers" data-en="Level 0 · No spoilers">Nivel 0 · Sin spoilers</option><option value="1" data-es="Nivel 1 · Contexto básico" data-en="Level 1 · Basic context">Nivel 1 · Contexto básico</option><option value="2" selected data-es="Nivel 2 · Spoilers moderados" data-en="Level 2 · Moderate spoilers">Nivel 2 · Spoilers moderados</option></select></div>
+</section>
+<p id="timelineCount" class="timeline-count" aria-live="polite"></p>
+<section id="timelineList" class="timeline-list" aria-live="polite"></section>
+<p id="timelineEmpty" class="timeline-empty" hidden data-es="No hay arcos que coincidan con esos filtros. Prueba otra versión o un nivel de spoilers distinto." data-en="No arcs match those filters. Try another version or spoiler level.">No hay arcos que coincidan con esos filtros. Prueba otra versión o un nivel de spoilers distinto.</p>
+
+<section class="timeline-extra">
+<div class="timeline-extra-heading"><span class="timeline-kicker" data-es="FUERA DE LA LÍNEA PRINCIPAL" data-en="OUTSIDE THE MAIN STORY">FUERA DE LA LÍNEA PRINCIPAL</span><h2 data-es="Historias que amplían el mundo" data-en="Stories that expand the world">Historias que amplían el mundo</h2><p data-es="No todo el material complementario se intercala entre los arcos principales. Estas categorías se consultan por separado para respetar su publicación y su ubicación narrativa." data-en="Not all supplementary material fits between the main arcs. These categories are kept separate to respect publication order and narrative placement.">No todo el material complementario se intercala entre los arcos principales. Estas categorías se consultan por separado para respetar su publicación y su ubicación narrativa.</p></div>
+<div class="timeline-extra-grid">
+<article><span>EX</span><h3 data-es="Novelas EX" data-en="EX novels">Novelas EX</h3><p data-es="Historias complementarias centradas en otros personajes y acontecimientos del mundo. Algunas transcurren antes de la historia principal; por ejemplo, la descripción editorial de EX 6 sitúa su relato diez años antes." data-en="Side stories focused on other characters and events in the world. Some take place before the main story; for example, the publisher's description places EX 6 ten years earlier.">Historias complementarias centradas en otros personajes y acontecimientos del mundo. Algunas transcurren antes de la historia principal; por ejemplo, la descripción editorial de EX 6 sitúa su relato diez años antes.</p><a href="https://yenpress.com/series/reex-light-novel" target="_blank" rel="noopener noreferrer" data-es="Ver catálogo editorial ↗" data-en="View publisher catalogue ↗">Ver catálogo editorial ↗</a></article>
+<article><span>IF</span><h3 data-es="Rutas alternativas" data-en="Alternate routes">Rutas alternativas</h3><p data-es="Escenarios hipotéticos separados de la continuidad principal. No se insertan como sucesos canónicos dentro de la cronología central." data-en="What-if scenarios separate from the main continuity. They are not inserted as canonical events in the central timeline.">Escenarios hipotéticos separados de la continuidad principal. No se insertan como sucesos canónicos dentro de la cronología central.</p><small data-es="SECCIÓN COMPLEMENTARIA" data-en="SUPPLEMENTARY SECTION">SECCIÓN COMPLEMENTARIA</small></article>
+<article><span>SS</span><h3 data-es="Historias cortas y especiales" data-en="Short stories & specials">Historias cortas y especiales</h3><p data-es="Relatos publicados en distintos formatos. Su ubicación puede variar, por lo que cada entrada futura indicará su fuente y contexto." data-en="Stories published across different formats. Their placement may vary, so each future entry will identify its source and context.">Relatos publicados en distintos formatos. Su ubicación puede variar, por lo que cada entrada futura indicará su fuente y contexto.</p><small data-es="ÍNDICE EN DESARROLLO" data-en="INDEX IN PROGRESS">ÍNDICE EN DESARROLLO</small></article>
+</div>
+</section>
+
+<section class="timeline-sources"><span class="timeline-kicker" data-es="FUENTES Y CRITERIO EDITORIAL" data-en="SOURCES & EDITORIAL POLICY">FUENTES Y CRITERIO EDITORIAL</span>
+<ul>
+<li><a href="https://re-zero-anime.jp/tv/story/" target="_blank" rel="noopener noreferrer">Sitio oficial del anime — historias y episodios ↗</a></li>
+<li><a href="https://kadokawa-anime.com/titles/entry-224.html" target="_blank" rel="noopener noreferrer">KADOKAWA — ficha oficial de la temporada 4 ↗</a></li>
+<li><a href="https://yenpress.com/series/reex-light-novel" target="_blank" rel="noopener noreferrer">Yen Press — catálogo de novelas EX ↗</a></li>
+</ul>
+<p data-es="Las descripciones son resúmenes originales y breves. Las adaptaciones pueden cambiar el ritmo, el orden de escenas o los detalles; por eso cada versión se identifica por separado. La lista se ampliará solo cuando los datos puedan contrastarse." data-en="Descriptions are brief original summaries. Adaptations may change pacing, scene order, or details; each version is therefore identified separately. The list will expand only when details can be cross-checked.">Las descripciones son resúmenes originales y breves. Las adaptaciones pueden cambiar el ritmo, el orden de escenas o los detalles; por eso cada versión se identifica por separado. La lista se ampliará solo cuando los datos puedan contrastarse.</p>
+</section>
+</main>
+<footer><a class="logo" href="../index.html"><span>双</span> REM <i>/</i> RAM</a><small>Archivo fanmade no oficial · Re:Zero pertenece a sus respectivos titulares.</small></footer>
+<script src="../assets/js/main.js"></script><script src="../assets/js/timeline.js"></script>
+</body></html>
