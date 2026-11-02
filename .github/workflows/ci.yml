@@ -19,22 +19,44 @@ jobs:
         run: |
           test -f index.html
           test -f assets/css/style.css
+          test -f assets/css/pages.css
           test -f assets/js/main.js
+          test -f pages/rem.html
+          test -f pages/ram.html
+          test -f pages/characters.html
+          test -f pages/timeline.html
+          test -f pages/universe.html
           test -f CNAME
           grep -qx 'rem-ram.me' CNAME
       - name: Check JavaScript syntax
         run: node --check assets/js/main.js
-      - name: Check local asset references
+      - name: Check local links and assets in every page
         run: |
           node - <<'NODE'
           const fs = require('fs');
-          const html = fs.readFileSync('index.html', 'utf8');
-          const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m => m[1]).filter(p => !p.startsWith('#') && !p.includes('://') && !p.startsWith('mailto:'));
-          const missing = refs.filter(p => !fs.existsSync(p));
-          if (missing.length) { console.error('Missing local references:', missing.join(', ')); process.exit(1); }
-          console.log('All local references exist.');
+          const path = require('path');
+          const htmlFiles = [];
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory() && !['.git','node_modules'].includes(entry.name)) walk(full);
+              else if (entry.isFile() && entry.name.endsWith('.html')) htmlFiles.push(full);
+            }
+          }
+          walk('.');
+          const missing = [];
+          for (const file of htmlFiles) {
+            const html = fs.readFileSync(file, 'utf8');
+            const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m => m[1]).filter(p => !p.startsWith('#') && !p.includes('://') && !p.startsWith('mailto:'));
+            for (const ref of refs) {
+              const target = path.resolve(path.dirname(file), ref.split('#')[0]);
+              if (!fs.existsSync(target)) missing.push(file + ' -> ' + ref);
+            }
+          }
+          if (missing.length) { console.error('Broken local references:\n' + missing.join('\n')); process.exit(1); }
+          console.log('Checked ' + htmlFiles.length + ' HTML pages; all local references exist.');
           NODE
-      - name: Verify bilingual coverage
+      - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html
           grep -q 'data-en=' index.html
