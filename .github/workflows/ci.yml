@@ -20,16 +20,19 @@ jobs:
           test -f index.html
           test -f assets/css/style.css
           test -f assets/css/pages.css
+          test -f assets/css/characters.css
           test -f assets/js/main.js
+          test -f assets/js/characters.js
           test -f pages/rem.html
           test -f pages/ram.html
           test -f pages/characters.html
           test -f pages/timeline.html
           test -f pages/universe.html
-          test -f CNAME
           grep -qx 'rem-ram.me' CNAME
       - name: Check JavaScript syntax
-        run: node --check assets/js/main.js
+        run: |
+          node --check assets/js/main.js
+          node --check assets/js/characters.js
       - name: Check local links and assets in every page
         run: |
           node - <<'NODE'
@@ -47,7 +50,7 @@ jobs:
           const missing = [];
           for (const file of htmlFiles) {
             const html = fs.readFileSync(file, 'utf8');
-            const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m => m[1]).filter(p => !p.startsWith('#') && !p.includes('://') && !p.startsWith('mailto:'));
+            const refs = [...html.matchAll(/(?:src|href|rel="stylesheet" href)="([^"]+)"/g)].map(m => m[1]).filter(p => !p.startsWith('#') && !p.includes('://') && !p.startsWith('mailto:'));
             for (const ref of refs) {
               const target = path.resolve(path.dirname(file), ref.split('#')[0]);
               if (!fs.existsSync(target)) missing.push(file + ' -> ' + ref);
@@ -56,6 +59,12 @@ jobs:
           if (missing.length) { console.error('Broken local references:\n' + missing.join('\n')); process.exit(1); }
           console.log('Checked ' + htmlFiles.length + ' HTML pages; all local references exist.');
           NODE
+      - name: Verify interactive character directory
+        run: |
+          grep -q 'characterSearch' pages/characters.html
+          grep -q 'characterCategory' pages/characters.html
+          grep -q 'renderCharacters' assets/js/characters.js
+          grep -q 'data-en=' pages/characters.html
       - name: Verify bilingual homepage
         run: |
           grep -q 'data-es=' index.html
